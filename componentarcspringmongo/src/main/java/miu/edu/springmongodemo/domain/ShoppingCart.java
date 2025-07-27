@@ -10,11 +10,15 @@ import java.util.List;
 public class ShoppingCart {
 
     @Id
-    private String customer;
+    private String id;
+    private String customerId;
     private List<CartItem> items = new ArrayList<>();
 
-    public ShoppingCart(String customer) {
-        this.customer = customer;
+    public ShoppingCart(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public ShoppingCart() {
     }
 
     public void addItem(CartItem newItem) {

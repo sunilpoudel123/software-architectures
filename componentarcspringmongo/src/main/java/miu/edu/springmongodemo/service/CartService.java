@@ -13,13 +13,13 @@ public class CartService {
     private CartDao cartDao;
 
     public ShoppingCart addItem(String customerId, CartItem item) {
-        ShoppingCart cart = cartDao.findById(customerId).orElse(new ShoppingCart(customerId));
+        ShoppingCart cart = cartDao.findByCustomerId(customerId).orElse(new ShoppingCart(customerId));
         cart.addItem(item);
         return cartDao.save(cart);
     }
 
     public ShoppingCart removeItem(String customerId, String productId) {
-        ShoppingCart cart = cartDao.findById(customerId).orElse(null);
+        ShoppingCart cart = cartDao.findByCustomerId(customerId).orElse(null);
         if (cart != null) {
             cart.removeItem(productId);
             cartDao.save(cart);
@@ -28,11 +28,11 @@ public class CartService {
     }
 
     public ShoppingCart viewCart(String customerId) {
-        return cartDao.findById(customerId).orElse(null);
+        return cartDao.findByCustomerId(customerId).orElse(null);
     }
 
     public void changeQuantity(String customerId, String productId, int quantity) {
-        ShoppingCart cart = cartDao.findById(customerId).orElse(null);
+        ShoppingCart cart = cartDao.findByCustomerId(customerId).orElse(null);
         if (cart != null) {
             cart.changeQuantity(productId, quantity);
             cartDao.save(cart);
@@ -44,7 +44,7 @@ public class CartService {
     }
 
     public boolean checkoutCart(String customerId) {
-        ShoppingCart cart = cartDao.findById(customerId).orElse(null);
+        ShoppingCart cart = cartDao.findByCustomerId(customerId).orElse(null);
         if (cart != null && !cart.getItems().isEmpty()) {
             cartDao.deleteById(customerId);
             return true;

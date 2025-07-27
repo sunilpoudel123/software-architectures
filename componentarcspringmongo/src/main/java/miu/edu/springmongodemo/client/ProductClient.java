@@ -19,6 +19,7 @@ public class ProductClient {
     private final String BASE_URL = "http://localhost:8082/products";
 
     public Product getProduct(String id) {
+        restTemplate.getForObject(BASE_URL + "/" + id, Product.class);
         return restTemplate.getForObject(BASE_URL + "/" + id, Product.class);
     }
 

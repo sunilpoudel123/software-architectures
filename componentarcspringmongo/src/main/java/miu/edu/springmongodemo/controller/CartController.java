@@ -15,7 +15,8 @@ public class CartController {
 
     @PostMapping("/{customerId}/add")
     public ShoppingCart addItem(@PathVariable String customerId, @RequestBody CartItem item) {
-        return cartService.addItem(customerId, item);
+        ShoppingCart cart = cartService.addItem(customerId, item);
+        return cart;
     }
 
     @PostMapping("/{customerId}/remove")
