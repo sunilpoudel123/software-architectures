@@ -1,0 +1,13 @@
+package miu.edu.springmongodemo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringmongodemoApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
