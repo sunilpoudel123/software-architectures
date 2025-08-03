@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 8084
 
 eureka:
   client:
@@ -8,9 +8,7 @@ eureka:
 
 spring:
   application:
-    name: Enterprise Service
+    name: Next Day Shipping Service
+
 
     
-
-  
-  

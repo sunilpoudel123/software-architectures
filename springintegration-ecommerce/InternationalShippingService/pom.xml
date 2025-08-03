@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>warehouses</groupId>
-	<artifactId>warehouseService</artifactId>
+	<groupId>shipping</groupId>
+	<artifactId>ShippingService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>warehouseService</name>
-	<description>warehouseService</description>
+	<name>ShippingService</name>
+	<description>Shipping Service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
