@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ShippingActivator {
 
-    @ServiceActivator(inputChannel = "shippingchannel")
+    @ServiceActivator(inputChannel = "shippingchannelInternational")
     public void handleOrder(Order order) {
-        System.out.println("Shipping received: " + order.getId());
+        System.out.println("International Shipping received: " + order.getId());
     }
 }

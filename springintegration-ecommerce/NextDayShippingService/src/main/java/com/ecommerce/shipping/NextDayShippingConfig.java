@@ -9,17 +9,17 @@ import org.springframework.integration.http.dsl.Http;
 import org.springframework.messaging.MessageChannel;
 
 @Configuration
-public class ShippingConfig {
+public class NextDayShippingConfig {
 
     @Bean
-    public MessageChannel shippingchannel() {
+    public MessageChannel shippingchannelNextDay() {
         return new DirectChannel();
     }
 
     @Bean
     public IntegrationFlow shippingInboundFlow() {
-        return IntegrationFlows.from(Http.inboundGateway("/esb/orders"))
-                .channel("shippingchannel")
+        return IntegrationFlows.from(Http.inboundGateway("/shipping/nextday"))
+                .channel("shippingchannelNextDay")
                 .get();
     }
 }

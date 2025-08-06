@@ -7,9 +7,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ShippingServiceApplication {
+public class InternationalShippingServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShippingServiceApplication.class, args);
+		SpringApplication.run(InternationalShippingServiceApplication.class, args);
 	}
 }

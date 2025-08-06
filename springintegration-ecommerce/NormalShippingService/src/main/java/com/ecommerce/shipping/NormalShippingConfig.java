@@ -9,17 +9,17 @@ import org.springframework.integration.http.dsl.Http;
 import org.springframework.messaging.MessageChannel;
 
 @Configuration
-public class ShippingConfig {
+public class NormalShippingConfig {
 
     @Bean
-    public MessageChannel shippingchannel() {
+    public MessageChannel shippingchannelNormal() {
         return new DirectChannel();
     }
 
     @Bean
     public IntegrationFlow shippingInboundFlow() {
-        return IntegrationFlows.from(Http.inboundGateway("/esb/orders"))
-                .channel("shippingchannel")
+        return IntegrationFlows.from(Http.inboundGateway("/shipping/normal"))
+                .channel("shippingchannelNormal")
                 .get();
     }
 }

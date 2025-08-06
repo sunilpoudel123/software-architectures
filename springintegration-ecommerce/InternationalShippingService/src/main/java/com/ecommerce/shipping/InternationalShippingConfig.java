@@ -1,4 +1,4 @@
-package com.ecommerce.warehouse;
+package com.ecommerce.shipping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,17 +9,17 @@ import org.springframework.integration.http.dsl.Http;
 import org.springframework.messaging.MessageChannel;
 
 @Configuration
-public class WarehouseConfig {
+public class InternationalShippingConfig {
 
     @Bean
-    public MessageChannel warehousechannel() {
+    public MessageChannel shippingchannelInternational() {
         return new DirectChannel();
     }
 
     @Bean
-    public IntegrationFlow warehouseInboundFlow() {
-        return IntegrationFlows.from(Http.inboundGateway("/esb/orders"))
-                .channel("warehousechannel")
+    public IntegrationFlow shippingInboundFlow() {
+        return IntegrationFlows.from(Http.inboundGateway("/shipping/international"))
+                .channel("shippingchannelInternational")
                 .get();
     }
 }

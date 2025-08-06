@@ -37,4 +37,13 @@ public class Order {
     public void setOrderType(String orderType) {
         this.orderType = orderType;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id='" + id + '\'' +
+                ", amount=" + amount +
+                ", orderType='" + orderType + '\'' +
+                '}';
+    }
 }
