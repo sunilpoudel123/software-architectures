@@ -1,18 +1,16 @@
-package com.ecommerce.order;
+package com.ecommerce.product;
 
 import com.ecommerce.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 
 @RestController
 @RequestMapping("/orders")
-public class OrderController {
+public class orderController {
 
 	@Autowired
 	private MessageChannel orderChannel;

@@ -1,4 +1,4 @@
-package com.ecommerce.order;
+package com.ecommerce.product;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
