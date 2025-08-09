@@ -1,8 +1,8 @@
-package com.ecommerce.order;
+package com.ecommerce.esb;
 
 import com.ecommerce.model.Order;
-import com.ecommerce.order.router.OrderTypeRouter;
-import com.ecommerce.order.router.ShippingRouter;
+import com.ecommerce.esb.router.OrderTypeRouter;
+import com.ecommerce.esb.router.ShippingRouter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
