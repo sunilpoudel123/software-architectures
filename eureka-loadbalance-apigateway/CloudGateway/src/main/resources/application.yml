@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: productModule
+          uri: lb://product-service
+          predicates:
+           - Path=/products/**
+        - id: stockModule
+          uri: lb://stock-service
+          predicates:
+           - Path=/stocks/**
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaserver1:8761/eureka/, http://eurekaserver2:8762/eureka/
+    register-with-eureka: true
+    fetch-registry: true

@@ -1,0 +1,15 @@
+server:
+  port: 8911
+
+
+spring:
+  application:
+    name: stock-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserver1:8761/eureka/, http://eurekaserver2:8762/eureka/
+#ESB URL
+  
+  
