@@ -1,0 +1,6 @@
+server:
+  port: 8905
+
+spring:
+  application:
+    name: evenOdd-service

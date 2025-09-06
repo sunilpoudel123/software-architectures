@@ -1,0 +1,6 @@
+server:
+  port: 8904
+
+spring:
+  application:
+    name: math-service
