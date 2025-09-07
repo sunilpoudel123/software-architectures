@@ -1,0 +1,5 @@
+server:
+  port: 8090
+
+greeting: Hello from config server!
+message: test
