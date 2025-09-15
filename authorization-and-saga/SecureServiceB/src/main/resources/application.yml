@@ -1,0 +1,16 @@
+server:
+  port: 8091
+  
+security:
+  oauth2:
+    client: 
+      accessTokenUri: http://localhost:8088/oauth/token
+      userAuthorizationUri: http://localhost:8088/oauth/authorize
+      clientId: client
+      clientSecret: secret
+      grant-type: client_credentials
+
+    resource:
+      userInfoUri: http://localhost:8088/user
+      
+      
